@@ -14,11 +14,20 @@ const courseSchema = new Schema({
         type:Number
         
     },
+    status:{
+        type:String,
+        default:"active", 
+        enum:["active","inactive"]
+    },
+    
     // reference key (foreign key)
     categoryId:{
         type:mongoose.Types.ObjectId,
         ref:"category" // table name (check in category model name must pass here to bind relation )
     },
+    imagePath:{
+        type:String
+    }
 
     // multiple reference key de sakate hai ek model me 
     // subCategoryId:{

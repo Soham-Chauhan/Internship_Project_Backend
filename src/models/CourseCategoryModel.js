@@ -8,7 +8,7 @@ const categorySchema = new Schema({
     },
     status:{
         type:String,
-        default:"active",
+        default:"active", 
         enum:["active","inactive"]
     }
 })

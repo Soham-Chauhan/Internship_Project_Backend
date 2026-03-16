@@ -19,6 +19,12 @@ DBConnection()
 const userRoutes = require("./src/routes/UserRoute")
 app.use("/user",userRoutes)
 
+const categoryRoutes = require("./src/routes/CategoryRoutes")
+app.use("/category",categoryRoutes)
+
+const courseRoutes = require("./src/routes/CourseRoutes")
+app.use("/courses",courseRoutes)
+
 // const PORT = 3000
 const PORT = process.env.PORT
 app.listen(PORT,()=>{
