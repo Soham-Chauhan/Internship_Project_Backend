@@ -10,7 +10,7 @@ const createCourse = async(req,res) =>{
         // const savedCourse = await courseSchema.create({...req.body,imagePath:req.file.path})
         
         const cloudinaryResponse = await uploadToCloudinary(req.file.path)
-        console.log("cloudinaryResponse",cloudinaryResponse) // to ye ek secure_url return karta hai
+        // console.log("cloudinaryResponse",cloudinaryResponse) // to ye ek secure_url return karta hai
 
         const savedCourse = await courseSchema.create({...req.body,imagePath:cloudinaryResponse.secure_url})
         
